@@ -1,0 +1,27 @@
+{
+  "name": "mock-server",
+  "version": "1.0.0",
+  "description": "由nodejs创建的一个可视化接口模拟工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forever25/mock-server-node.git"
+  },
+  "keywords": [
+    "mock",
+    "api",
+    "node"
+  ],
+  "author": "zws",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forever25/mock-server-node/issues"
+  },
+  "homepage": "https://github.com/forever25/mock-server-node#readme",
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
+}
