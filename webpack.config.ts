@@ -5,6 +5,7 @@ import webpack from 'webpack';
 const WebpackConfig: webpack.Configuration = {
   entry: './src/main.ts',
   mode: 'production',
+  target:'node',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
