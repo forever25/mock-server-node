@@ -1,9 +1,6 @@
 # 通过 Github actions， 在 Github 仓库的每一次 commit 后自动同步到 Gitee 上
 name: gitee-sync
-on:
-  push:
-    branches:
-      - master
+on: [push]
 jobs:
   repo-sync:
     env:
