@@ -1,7 +1,7 @@
 /*
  * @Author: ZWS
  * @Date: 2022-03-12 14:36:19
- * @LastEditTime: 2022-03-14 11:17:01
+ * @LastEditTime: 2022-03-16 13:31:39
  * @Description: 文件描述
  */
 
@@ -13,4 +13,4 @@ app.use(async ctx => {
 });
 
 app.listen(3000);
-console.log('https://127.0.0.1:3000')
+console.log('http://127.0.0.1:3000')
