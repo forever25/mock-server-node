@@ -1,11 +1,14 @@
 import path from 'path';
 import webpack from 'webpack';
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+
 
 
 const WebpackConfig: webpack.Configuration = {
   entry: './src/main.ts',
   mode: 'production',
-  target:'node',
+  target: 'node',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
@@ -14,6 +17,18 @@ const WebpackConfig: webpack.Configuration = {
   watchOptions: {
     ignored: '/node_modules/'
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin(
+      {
+        patterns: [
+          {
+            from: path.resolve(__dirname, './src/config'),
+            to: 'config'
+          }
+        ]
+      })
+  ],
   module: {
     rules: [
       {
@@ -26,13 +41,12 @@ const WebpackConfig: webpack.Configuration = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts','json'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@root': path.resolve(__dirname)
     }
   }
 }
-
 
 export default WebpackConfig;
