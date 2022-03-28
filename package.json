@@ -26,10 +26,12 @@
   "homepage": "https://github.com/forever25/mock-server-node#readme",
   "dependencies": {
     "koa": "^2.13.4",
+    "koa-log4": "2",
     "koa-router": "^10.1.1"
   },
   "devDependencies": {
     "@types/koa": "^2.13.4",
+    "@types/koa-log4": "^2.3.3",
     "@types/koa-router": "^7.4.4",
     "@types/node": "^17.0.21",
     "@types/webpack": "^5.28.0",

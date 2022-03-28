@@ -25,6 +25,10 @@ const WebpackConfig: webpack.Configuration = {
           {
             from: path.resolve(__dirname, './src/config'),
             to: 'config'
+          },
+          {
+            from: path.resolve(__dirname, './src/data'),
+            to: 'data'
           }
         ]
       })
